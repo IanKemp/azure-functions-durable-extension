@@ -42,7 +42,7 @@ namespace Microsoft.Azure.WebJobs.Extensions.DurableTask
         HttpResponseMessage CreateCheckStatusResponse(HttpRequestMessage request, string instanceId, bool returnInternalServerErrorOnFailure = false);
 
         /// <summary>
-        /// Creates an HTTP response that is useful for checking the status of the specified instance.
+        /// Creates and returns an HTTP response that is useful for checking the status of the specified instance.
         /// </summary>
         /// <remarks>
         /// The payload of the returned <see cref="IActionResult"/> contains HTTP API URLs that can
@@ -58,14 +58,14 @@ namespace Microsoft.Azure.WebJobs.Extensions.DurableTask
         IActionResult CreateCheckStatusResponse(HttpRequest request, string instanceId, bool returnInternalServerErrorOnFailure = false);
 
         /// <summary>
-        /// Creates an returns a <see cref="HttpManagementPayload"/> object that contains status, terminate and send external event HTTP endpoints.
+        /// Creates and returns a <see cref="HttpManagementPayload"/> object that contains status, terminate and send external event HTTP endpoints.
         /// </summary>
         /// <param name="instanceId">The ID of the orchestration instance to check.</param>
         /// <returns>Instance of the <see cref="HttpManagementPayload"/> class.</returns>
         HttpManagementPayload CreateHttpManagementPayload(string instanceId);
 
         /// <summary>
-        /// Creates an HTTP response which either contains a payload of management URLs for a non-completed instance
+        /// Creates and returns an HTTP response which either contains a payload of management URLs for a non-completed instance
         /// or contains the payload containing the output of the completed orchestration.
         /// </summary>
         /// <remarks>
@@ -90,7 +90,7 @@ namespace Microsoft.Azure.WebJobs.Extensions.DurableTask
             bool returnInternalServerErrorOnFailure = false);
 
         /// <summary>
-        /// Creates an HTTP response which either contains a payload of management URLs for a non-completed instance
+        /// Creates and returns an HTTP response which either contains a payload of management URLs for a non-completed instance
         /// or contains the payload containing the output of the completed orchestration.
         /// </summary>
         /// <remarks>
